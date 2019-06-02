@@ -1,0 +1,17 @@
+server:
+  port: 80
+  context-path: /eureka_server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      efaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: true #测试关闭自我保护，不可用服务踢出
+spring:
+  freemarker:
+    prefer-file-system-access: false
