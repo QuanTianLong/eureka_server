@@ -43,16 +43,6 @@
 		<!--移除内置tomcat-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
@@ -72,11 +62,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>-->
 	</dependencies>
 
 	<dependencyManagement>
@@ -93,14 +78,7 @@
 
 	<build>
 		<finalName>eureka_server</finalName>
-		<plugins>
-			<!--<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<includeSystemScope>true</includeSystemScope>
-				</configuration>
-			</plugin>-->
+		<!--<plugins>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
@@ -108,11 +86,11 @@
 					<url>http://127.0.0.1/manager/text</url>
 					<username>admin</username>
 					<password>111111</password>
-					<path>/eureka_server</path>   <!-- 应用的部署位置 -->
+					<path>/eureka_server</path>   &lt;!&ndash; 应用的部署位置 &ndash;&gt;
 					<update>true</update>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins>-->
 	</build>
 
 	<repositories>
